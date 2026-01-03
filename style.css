@@ -1,1 +1,75 @@
+body {
+  font-family: Arial;
+  background-color: #2ecc71;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 { text-align: center; margin-bottom: 20px; }
+
+#boardContainer {
+  display: grid;
+  grid-template-columns: repeat(11, 60px);
+  grid-template-rows: repeat(11, 60px);
+  gap: 0;
+  width: 660px;
+  height: 660px;
+  border: 3px solid #333;
+}
+
+.square {
+  border: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.square.inner { visibility: hidden; }
+
+.square.go { background-color: #ffeaa7; }
+.square.jail { background-color: #fab1a0; }
+.square.free { background-color: #dfe6e9; }
+.square.chance { background-color: #81ecec; }
+.square.community { background-color: #74b9ff; }
+.square.tax { background-color: #fd79a8; }
+
+.token {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 2px;
+}
+
+.token.player1 { background-color: red; }
+.token.player2 { background-color: blue; }
+
+#gamePanel, #playerProperties, #boardLog {
+  background-color: #fff;
+  padding: 10px;
+  border: 3px solid #333;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#gamePanel button, #tradePanel button {
+  margin: 5px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 2px solid #333;
+  cursor: pointer;
+  background-color: #f39c12;
+  color: #fff;
+}
+
+#gamePanel button:disabled, #tradePanel button:disabled { background-color: #bdc3c7; cursor: not-allowed; }
+
+#boardLog { max-height: 300px; overflow-y: auto; width: 700px; }
+#boardLog ul { list-style: none; padding-left: 10px; }
+#boardLog li { margin-bottom: 5px; font-size: 14px; }
 
