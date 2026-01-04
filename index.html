@@ -1,43 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Property Tycoon</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Property Tycoon</h1>
-  <div id="boardContainer"></div>
 
-  <div id="gamePanel">
-    <p><b>Current Player:</b> <span id="currentPlayer"></span></p>
-    <p><b>Money:</b> $<span id="playerMoney"></span></p>
-    <p><b>Position:</b> <span id="playerPos"></span> - <span id="spaceName"></span></p>
-    <button id="rollBtn">Roll Dice</button>
-    <button id="buyBtn" disabled>Buy Property</button>
-    <button id="endTurnBtn" disabled>End Turn</button>
-    <button id="tradeBtn">Trade</button>
-    <p id="message"></p>
-  </div>
+<h1>Property Tycoon</h1>
 
-  <div id="playerProperties">
-    <h3>Properties</h3>
-    <p><b>Player 1:</b> <span id="props1"></span></p>
-    <p><b>Player 2:</b> <span id="props2"></span></p>
-  </div>
+<div id="board"></div>
 
-  <div id="tradePanel" style="display:none;">
-    <p>Trade Property:</p>
-    <select id="tradeFrom"></select>
-    <select id="tradeTo"></select>
-    <input type="number" id="tradeCash" placeholder="Cash Offered">
-    <button id="confirmTradeBtn">Confirm Trade</button>
-  </div>
+<div id="controls">
+  <p>Current Player: <span id="currentPlayer">1</span></p>
+  <button onclick="rollDice()">Roll Dice</button>
+  <p id="message"></p>
+</div>
 
-  <div id="boardLog">
-    <h3>Game Log:</h3>
-    <ul id="logList"></ul>
-  </div>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
